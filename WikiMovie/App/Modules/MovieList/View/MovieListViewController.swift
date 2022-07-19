@@ -52,6 +52,11 @@ class MovieListViewController: UIViewController{
 }
 
 extension MovieListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieDetailsPresent = MovieDetailsViewController()
+        self.present(movieDetailsPresent, animated: true)
+    }
 }
 
 extension MovieListViewController: UITableViewDataSource {

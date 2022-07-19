@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		25827F6F22F5B0372F0E815E /* Pods_WikiMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDBF5B0A7E73107CBF8FE50 /* Pods_WikiMovie.framework */; };
+		320F2BB02886ADDC0081304C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320F2BAF2886ADDC0081304C /* HomeViewController.swift */; };
+		320F2BB22886BAAA0081304C /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320F2BB12886BAAA0081304C /* MovieDetailsViewController.swift */; };
 		326F184128868CF10090C2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184028868CF10090C2D2 /* AppDelegate.swift */; };
 		326F184328868CF10090C2D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184228868CF10090C2D2 /* SceneDelegate.swift */; };
 		326F184A28868CF20090C2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326F184928868CF20090C2D2 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320F2BAF2886ADDC0081304C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		320F2BB12886BAAA0081304C /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		326F183D28868CF10090C2D2 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326F184028868CF10090C2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		326F184228868CF10090C2D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				326F185828868D790090C2D2 /* App */,
 				326F184028868CF10090C2D2 /* AppDelegate.swift */,
 				326F184228868CF10090C2D2 /* SceneDelegate.swift */,
+				320F2BAF2886ADDC0081304C /* HomeViewController.swift */,
 				326F184928868CF20090C2D2 /* Assets.xcassets */,
 				326F184B28868CF20090C2D2 /* LaunchScreen.storyboard */,
 				326F184E28868CF20090C2D2 /* Info.plist */,
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				326F187528868F870090C2D2 /* MovieListViewController.swift */,
+				320F2BB12886BAAA0081304C /* MovieDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,11 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320F2BB22886BAAA0081304C /* MovieDetailsViewController.swift in Sources */,
 				326F187B2886910F0090C2D2 /* Constants.swift in Sources */,
 				326F187628868F870090C2D2 /* MovieListViewController.swift in Sources */,
 				326F187028868EC00090C2D2 /* ApiManager.swift in Sources */,
 				326F187428868F440090C2D2 /* MovieDTO.swift in Sources */,
 				326F186128868E120090C2D2 /* MovieListService.swift in Sources */,
+				320F2BB02886ADDC0081304C /* HomeViewController.swift in Sources */,
 				326F187228868F160090C2D2 /* MovieListDTO.swift in Sources */,
 				326F184128868CF10090C2D2 /* AppDelegate.swift in Sources */,
 				326F184328868CF10090C2D2 /* SceneDelegate.swift in Sources */,
