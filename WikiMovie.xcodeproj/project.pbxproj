@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25827F6F22F5B0372F0E815E /* Pods_WikiMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDBF5B0A7E73107CBF8FE50 /* Pods_WikiMovie.framework */; };
 		326F184128868CF10090C2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184028868CF10090C2D2 /* AppDelegate.swift */; };
 		326F184328868CF10090C2D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184228868CF10090C2D2 /* SceneDelegate.swift */; };
-		326F184528868CF10090C2D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184428868CF10090C2D2 /* ViewController.swift */; };
-		326F184828868CF10090C2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F184628868CF10090C2D2 /* Main.storyboard */; };
 		326F184A28868CF20090C2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326F184928868CF20090C2D2 /* Assets.xcassets */; };
 		326F184D28868CF20090C2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326F184B28868CF20090C2D2 /* LaunchScreen.storyboard */; };
+		326F186128868E120090C2D2 /* MovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F186028868E120090C2D2 /* MovieListService.swift */; };
+		326F187028868EC00090C2D2 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F186F28868EC00090C2D2 /* ApiManager.swift */; };
+		326F187228868F160090C2D2 /* MovieListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187128868F160090C2D2 /* MovieListDTO.swift */; };
+		326F187428868F440090C2D2 /* MovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187328868F430090C2D2 /* MovieDTO.swift */; };
+		326F187628868F870090C2D2 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187528868F870090C2D2 /* MovieListViewController.swift */; };
+		326F187B2886910F0090C2D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187A2886910F0090C2D2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		326F183D28868CF10090C2D2 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326F184028868CF10090C2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		326F184228868CF10090C2D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		326F184428868CF10090C2D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		326F184728868CF10090C2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		326F184928868CF20090C2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		326F184C28868CF20090C2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326F184E28868CF20090C2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		326F186028868E120090C2D2 /* MovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListService.swift; sourceTree = "<group>"; };
+		326F186F28868EC00090C2D2 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		326F187128868F160090C2D2 /* MovieListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDTO.swift; sourceTree = "<group>"; };
+		326F187328868F430090C2D2 /* MovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDTO.swift; sourceTree = "<group>"; };
+		326F187528868F870090C2D2 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		326F187A2886910F0090C2D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BDBF5B0A7E73107CBF8FE50 /* Pods_WikiMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E5787E886541D004F882F2 /* Pods-WikiMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiMovie.debug.xcconfig"; path = "Target Support Files/Pods-WikiMovie/Pods-WikiMovie.debug.xcconfig"; sourceTree = "<group>"; };
+		60E02AF165ED284F4EE3BEE0 /* Pods-WikiMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiMovie.release.xcconfig"; path = "Target Support Files/Pods-WikiMovie/Pods-WikiMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25827F6F22F5B0372F0E815E /* Pods_WikiMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300CAFC775D7FA6F240F5C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46E5787E886541D004F882F2 /* Pods-WikiMovie.debug.xcconfig */,
+				60E02AF165ED284F4EE3BEE0 /* Pods-WikiMovie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		326F183428868CF10090C2D2 = {
 			isa = PBXGroup;
 			children = (
 				326F183F28868CF10090C2D2 /* WikiMovie */,
 				326F183E28868CF10090C2D2 /* Products */,
+				300CAFC775D7FA6F240F5C2C /* Pods */,
+				B2DA56DFCE606CE22FCE0BD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +80,107 @@
 		326F183F28868CF10090C2D2 /* WikiMovie */ = {
 			isa = PBXGroup;
 			children = (
+				326F185828868D790090C2D2 /* App */,
 				326F184028868CF10090C2D2 /* AppDelegate.swift */,
 				326F184228868CF10090C2D2 /* SceneDelegate.swift */,
-				326F184428868CF10090C2D2 /* ViewController.swift */,
-				326F184628868CF10090C2D2 /* Main.storyboard */,
 				326F184928868CF20090C2D2 /* Assets.xcassets */,
 				326F184B28868CF20090C2D2 /* LaunchScreen.storyboard */,
 				326F184E28868CF20090C2D2 /* Info.plist */,
 			);
 			path = WikiMovie;
+			sourceTree = "<group>";
+		};
+		326F185828868D790090C2D2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				326F185928868D940090C2D2 /* Modules */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		326F185928868D940090C2D2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				326F1879288690FF0090C2D2 /* Utils */,
+				326F186828868E900090C2D2 /* Shared */,
+				326F185A28868DA10090C2D2 /* MovieList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		326F185A28868DA10090C2D2 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				326F185D28868DC60090C2D2 /* ViewModel */,
+				326F185C28868DB50090C2D2 /* View */,
+				326F185B28868DAB0090C2D2 /* Service */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		326F185B28868DAB0090C2D2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				326F186028868E120090C2D2 /* MovieListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		326F185C28868DB50090C2D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				326F187528868F870090C2D2 /* MovieListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		326F185D28868DC60090C2D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		326F186828868E900090C2D2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				326F186E28868EB30090C2D2 /* Networking */,
+				326F186928868E940090C2D2 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		326F186928868E940090C2D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				326F187128868F160090C2D2 /* MovieListDTO.swift */,
+				326F187328868F430090C2D2 /* MovieDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		326F186E28868EB30090C2D2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				326F186F28868EC00090C2D2 /* ApiManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		326F1879288690FF0090C2D2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				326F187A2886910F0090C2D2 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B2DA56DFCE606CE22FCE0BD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BDBF5B0A7E73107CBF8FE50 /* Pods_WikiMovie.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 326F185128868CF20090C2D2 /* Build configuration list for PBXNativeTarget "WikiMovie" */;
 			buildPhases = (
+				5AAB86AECAE990F8B5A33490 /* [CP] Check Pods Manifest.lock */,
 				326F183928868CF10090C2D2 /* Sources */,
 				326F183A28868CF10090C2D2 /* Frameworks */,
 				326F183B28868CF10090C2D2 /* Resources */,
+				A367922247500EFC6DA22F1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +245,64 @@
 			files = (
 				326F184D28868CF20090C2D2 /* LaunchScreen.storyboard in Resources */,
 				326F184A28868CF20090C2D2 /* Assets.xcassets in Resources */,
-				326F184828868CF10090C2D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AAB86AECAE990F8B5A33490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A367922247500EFC6DA22F1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiMovie/Pods-WikiMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiMovie/Pods-WikiMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WikiMovie/Pods-WikiMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		326F183928868CF10090C2D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				326F184528868CF10090C2D2 /* ViewController.swift in Sources */,
+				326F187B2886910F0090C2D2 /* Constants.swift in Sources */,
+				326F187628868F870090C2D2 /* MovieListViewController.swift in Sources */,
+				326F187028868EC00090C2D2 /* ApiManager.swift in Sources */,
+				326F187428868F440090C2D2 /* MovieDTO.swift in Sources */,
+				326F186128868E120090C2D2 /* MovieListService.swift in Sources */,
+				326F187228868F160090C2D2 /* MovieListDTO.swift in Sources */,
 				326F184128868CF10090C2D2 /* AppDelegate.swift in Sources */,
 				326F184328868CF10090C2D2 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +311,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		326F184628868CF10090C2D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				326F184728868CF10090C2D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		326F184B28868CF20090C2D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +438,7 @@
 		};
 		326F185228868CF20090C2D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46E5787E886541D004F882F2 /* Pods-WikiMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +449,6 @@
 				INFOPLIST_FILE = WikiMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +466,7 @@
 		};
 		326F185328868CF20090C2D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60E02AF165ED284F4EE3BEE0 /* Pods-WikiMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +477,6 @@
 				INFOPLIST_FILE = WikiMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
