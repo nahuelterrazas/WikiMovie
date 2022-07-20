@@ -13,5 +13,6 @@ struct MovieDTO: Codable {
     let overview: String
     let releaseDate: String
     let title: String
+    let posterPath: String
 }
 

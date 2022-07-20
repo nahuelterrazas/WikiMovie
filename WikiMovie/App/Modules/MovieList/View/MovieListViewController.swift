@@ -8,16 +8,25 @@
 import Foundation
 import UIKit
 
+protocol MovieListDelegate {
+    func reloadTable()
+    func showError(error: String)
+}
+
 class MovieListViewController: UIViewController{
     
 
     private var service = MovieListService()
+    private var viewModel: MovieListViewModel? // lo inicializo en viewDidLoad()
+    
     
     private lazy var tableView: UITableView = {
         let aTable = UITableView()
         aTable.translatesAutoresizingMaskIntoConstraints = false
         aTable.delegate = self
         aTable.dataSource = self
+        // debo registrar la ViewCell antes de poder usarla
+        aTable.register(MovieListTableViewCell.self, forCellReuseIdentifier: String(describing: MovieListTableViewCell.self))
 
         view.addSubview(aTable)
         return aTable
@@ -27,18 +36,14 @@ class MovieListViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupConstraints()
+        self.viewModel = MovieListViewModel(service: service, delegate:  self)
+        self.viewModel?.getMovies()
     }
     
     func setupView(){
         view.backgroundColor = .red
         title = "Movies"
-        setupConstraints()
-        service.getMovies { movies in
-            print(movies)
-        } onError: { error in
-            print(error)
-        }
-
     }
     
     func setupConstraints(){
@@ -61,13 +66,32 @@ extension MovieListViewController: UITableViewDelegate {
 
 extension MovieListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
+        self.viewModel?.moviesCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Celda numero \(indexPath.row+1)"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieListTableViewCell.self), for: indexPath) as? MovieListTableViewCell else {
+            return UITableViewCell()
+        }
+        let aMovie = self.viewModel?.getAMovie(at: indexPath.row)
+        
+        cell.name = aMovie?.title
+        cell.image = UIImage(named: "poster")
+        
         return cell
+    }
+    
+    
+}
+
+extension MovieListViewController: MovieListDelegate{
+    func reloadTable() {
+        self.tableView.reloadData()
+    }
+    
+    func showError(error: String) {
+        print("Algo fallo: ", error)
     }
     
     
