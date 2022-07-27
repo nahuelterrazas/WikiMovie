@@ -8,11 +8,8 @@
 import Foundation
 
 struct MovieDTO: Codable {
-    let adult: Bool
     let id: Int
-    let overview: String
-    let releaseDate: String
     let title: String
-    let posterPath: String
+    let posterPath: String?
 }
 

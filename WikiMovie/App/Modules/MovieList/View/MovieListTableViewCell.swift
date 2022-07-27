@@ -13,7 +13,7 @@ class MovieListTableViewCell: UITableViewCell {
     
     var name: String? {
         didSet{
-            movieName.text = name
+            movieNameLabel.text = name
         }
     }
     
@@ -22,6 +22,8 @@ class MovieListTableViewCell: UITableViewCell {
             placeholderImage.image = image
         }
     }
+    
+    var id: Int?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -40,7 +42,7 @@ class MovieListTableViewCell: UITableViewCell {
         return aImage
     }()
     
-    private lazy var movieName: UILabel = {
+    private lazy var movieNameLabel: UILabel = {
         let aLabel = UILabel()
         aLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -55,17 +57,17 @@ class MovieListTableViewCell: UITableViewCell {
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             
-            placeholderImage.widthAnchor.constraint(equalToConstant: 100),
-            placeholderImage.heightAnchor.constraint(equalToConstant: 150),
+            placeholderImage.widthAnchor.constraint(equalToConstant: 80),
+            placeholderImage.heightAnchor.constraint(equalToConstant: 120),
         
-            placeholderImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            placeholderImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-            placeholderImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
+            placeholderImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            placeholderImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            placeholderImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             
-            movieName.leadingAnchor.constraint(equalTo: placeholderImage.trailingAnchor, constant: 16),
-            movieName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            movieName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            movieName.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
+            movieNameLabel.leadingAnchor.constraint(equalTo: placeholderImage.trailingAnchor, constant: 15),
+            movieNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+            movieNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
+            movieNameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
 
         ])
     }

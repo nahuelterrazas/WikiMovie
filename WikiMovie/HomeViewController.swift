@@ -11,8 +11,8 @@ class HomeViewController: UIViewController {
 
     private lazy var Loginbutton: UIButton = {
         var configuration = UIButton.Configuration.filled()
-        configuration.title = "Log in"
-        configuration.baseBackgroundColor = .black
+        configuration.title = "Popular movies"
+        configuration.baseBackgroundColor = .darkGray
         
         let MovieListVC = MovieListViewController()
         let aButton = UIButton(type: .system, primaryAction: UIAction(handler: { _ in
@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
 
     func setupView() {
         setupConstraints()
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .systemRed.withAlphaComponent(0.9)
     }
 
     

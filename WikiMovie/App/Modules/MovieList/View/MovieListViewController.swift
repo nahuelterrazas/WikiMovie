@@ -25,9 +25,9 @@ class MovieListViewController: UIViewController{
         aTable.translatesAutoresizingMaskIntoConstraints = false
         aTable.delegate = self
         aTable.dataSource = self
+        aTable.rowHeight = 140
         // debo registrar la ViewCell antes de poder usarla
         aTable.register(MovieListTableViewCell.self, forCellReuseIdentifier: String(describing: MovieListTableViewCell.self))
-
         view.addSubview(aTable)
         return aTable
     }()
@@ -42,7 +42,6 @@ class MovieListViewController: UIViewController{
     }
     
     func setupView(){
-        view.backgroundColor = .red
         title = "Movies"
     }
     
@@ -59,8 +58,12 @@ class MovieListViewController: UIViewController{
 extension MovieListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movieDetailsPresent = MovieDetailsViewController()
-        self.present(movieDetailsPresent, animated: true)
+        let cell = tableView.cellForRow(at: indexPath) as! MovieListTableViewCell
+
+        let movieDetailsVC = MovieDetailsViewController()
+        movieDetailsVC.idCell = cell.id
+        
+        self.navigationController?.pushViewController(movieDetailsVC, animated: true)
     }
 }
 
@@ -78,6 +81,7 @@ extension MovieListViewController: UITableViewDataSource {
         
         cell.name = aMovie?.title
         cell.image = UIImage(named: "poster")
+        cell.id = aMovie?.id
         
         return cell
     }
