@@ -12,13 +12,10 @@ class MovieDetailsService {
     func getMovie(urlMovie: String, onComplete: @escaping (MovieDetailsDTO) -> Void,
                      onError: @escaping (String) -> Void) {
         
-        // Llamo una funciona
         ApiManager.shared.getCall(url: urlMovie) { response in
             
-            // Hago un switch
             switch response {
             case .success(let data):
-                // Hago un do catch
                 do {
                     if let data = data {
                         let decoder = JSONDecoder()

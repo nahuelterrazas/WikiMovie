@@ -14,7 +14,7 @@
 		320F2BB62887B4900081304C /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320F2BB52887B4900081304C /* MovieListTableViewCell.swift */; };
 		321A3066288F77BF0041CBB5 /* MovieDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A3065288F77BF0041CBB5 /* MovieDetailsService.swift */; };
 		321A3068288F78B40041CBB5 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A3067288F78B40041CBB5 /* MovieDetailsViewModel.swift */; };
-		321A306C288FBDD30041CBB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A306B288FBDD30041CBB5 /* Extensions.swift */; };
+		321A306C288FBDD30041CBB5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321A306B288FBDD30041CBB5 /* UIImageView+Extension.swift */; };
 		3260DD7A2890A0F60065C433 /* MovieDetailsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3260DD792890A0F60065C433 /* MovieDetailsDTO.swift */; };
 		326F184128868CF10090C2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184028868CF10090C2D2 /* AppDelegate.swift */; };
 		326F184328868CF10090C2D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F184228868CF10090C2D2 /* SceneDelegate.swift */; };
@@ -26,6 +26,7 @@
 		326F187428868F440090C2D2 /* MovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187328868F430090C2D2 /* MovieDTO.swift */; };
 		326F187628868F870090C2D2 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187528868F870090C2D2 /* MovieListViewController.swift */; };
 		326F187B2886910F0090C2D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326F187A2886910F0090C2D2 /* Constants.swift */; };
+		32B1C3FB2891EAAA00A84748 /* GenresDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1C3FA2891EAAA00A84748 /* GenresDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,7 @@
 		320F2BB52887B4900081304C /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		321A3065288F77BF0041CBB5 /* MovieDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsService.swift; sourceTree = "<group>"; };
 		321A3067288F78B40041CBB5 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
-		321A306B288FBDD30041CBB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		321A306B288FBDD30041CBB5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3260DD792890A0F60065C433 /* MovieDetailsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsDTO.swift; sourceTree = "<group>"; };
 		326F183D28868CF10090C2D2 /* WikiMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326F184028868CF10090C2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		326F187328868F430090C2D2 /* MovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDTO.swift; sourceTree = "<group>"; };
 		326F187528868F870090C2D2 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		326F187A2886910F0090C2D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		32B1C3FA2891EAAA00A84748 /* GenresDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresDTO.swift; sourceTree = "<group>"; };
 		3BDBF5B0A7E73107CBF8FE50 /* Pods_WikiMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5787E886541D004F882F2 /* Pods-WikiMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiMovie.debug.xcconfig"; path = "Target Support Files/Pods-WikiMovie/Pods-WikiMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		60E02AF165ED284F4EE3BEE0 /* Pods-WikiMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiMovie.release.xcconfig"; path = "Target Support Files/Pods-WikiMovie/Pods-WikiMovie.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,9 +134,7 @@
 			children = (
 				326F185828868D790090C2D2 /* App */,
 				326F184028868CF10090C2D2 /* AppDelegate.swift */,
-				321A306B288FBDD30041CBB5 /* Extensions.swift */,
 				326F184228868CF10090C2D2 /* SceneDelegate.swift */,
-				320F2BAF2886ADDC0081304C /* HomeViewController.swift */,
 				326F184928868CF20090C2D2 /* Assets.xcassets */,
 				326F184B28868CF20090C2D2 /* LaunchScreen.storyboard */,
 				326F184E28868CF20090C2D2 /* Info.plist */,
@@ -153,10 +153,11 @@
 		326F185928868D940090C2D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				326F1879288690FF0090C2D2 /* Utils */,
-				326F186828868E900090C2D2 /* Shared */,
+				320F2BAF2886ADDC0081304C /* HomeViewController.swift */,
 				326F185A28868DA10090C2D2 /* MovieList */,
 				3260DD7828909E280065C433 /* MovieDetails */,
+				326F186828868E900090C2D2 /* Shared */,
+				326F1879288690FF0090C2D2 /* Utils */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -211,6 +212,7 @@
 				326F187128868F160090C2D2 /* MovieListDTO.swift */,
 				326F187328868F430090C2D2 /* MovieDTO.swift */,
 				3260DD792890A0F60065C433 /* MovieDetailsDTO.swift */,
+				32B1C3FA2891EAAA00A84748 /* GenresDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				326F187A2886910F0090C2D2 /* Constants.swift */,
+				321A306B288FBDD30041CBB5 /* UIImageView+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -363,7 +366,8 @@
 				326F186128868E120090C2D2 /* MovieListService.swift in Sources */,
 				320F2BB02886ADDC0081304C /* HomeViewController.swift in Sources */,
 				320F2BB42887702A0081304C /* MovieListViewModel.swift in Sources */,
-				321A306C288FBDD30041CBB5 /* Extensions.swift in Sources */,
+				32B1C3FB2891EAAA00A84748 /* GenresDTO.swift in Sources */,
+				321A306C288FBDD30041CBB5 /* UIImageView+Extension.swift in Sources */,
 				326F187228868F160090C2D2 /* MovieListDTO.swift in Sources */,
 				326F184128868CF10090C2D2 /* AppDelegate.swift in Sources */,
 				3260DD7A2890A0F60065C433 /* MovieDetailsDTO.swift in Sources */,
@@ -515,6 +519,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,6 +548,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

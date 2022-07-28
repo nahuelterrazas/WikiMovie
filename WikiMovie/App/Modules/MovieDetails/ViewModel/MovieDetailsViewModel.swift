@@ -17,10 +17,6 @@ class MovieDetailsViewModel {
         self.delegate = delegate
     }
     
-    // Implementacion con closure
-    /*
-     func getPokemon(onGetPokemon: @escaping (PokemonDetailDTO) -> Void) {
-     */
     func getMovie() {
         service.getMovie(urlMovie: movieURL) { movie in
             self.delegate.movieData(data: movie)

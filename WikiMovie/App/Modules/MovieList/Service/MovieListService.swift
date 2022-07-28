@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  MovieListService.swift
 //  WikiMovie
 //
 //  Created by Nahuel Terrazas on 19/07/2022.
@@ -20,7 +20,6 @@ class MovieListService {
                     if let data = data {
                         let decoder = JSONDecoder()
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        print("Datos encontrados")
                         let movieResponse = try decoder.decode(MovieListDTO.self, from: data)
                         onComplete(movieResponse.results)
                     }

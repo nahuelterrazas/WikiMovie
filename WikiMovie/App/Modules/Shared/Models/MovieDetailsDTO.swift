@@ -10,9 +10,12 @@ import Foundation
 struct MovieDetailsDTO: Codable {
     let overview: String
     let releaseDate: String
-    let originalTitle: String
+    let title: String
     let posterPath: String
     let backdropPath: String
-//    let genreIds: [Int]
+    let genres: [GenresDTO]
     let originalLanguage: String
+    let voteAverage: Double
+    let runtime: Int
 }
+

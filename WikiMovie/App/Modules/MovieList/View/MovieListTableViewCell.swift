@@ -17,12 +17,6 @@ class MovieListTableViewCell: UITableViewCell {
         }
     }
     
-    var image: UIImage? {
-        didSet{
-            placeholderImage.image = image
-        }
-    }
-    
     var id: Int?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -34,10 +28,12 @@ class MovieListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var placeholderImage: UIImageView = {
+    lazy var placeholderImage: UIImageView = {
         let aImage = UIImageView()
-        aImage.image = UIImage(named: "popcorn")
+        aImage.contentMode = .scaleAspectFit
+        aImage.image = UIImage(named: "activityIndicator")
         aImage.translatesAutoresizingMaskIntoConstraints = false
+        
         contentView.addSubview(aImage)
         return aImage
     }()

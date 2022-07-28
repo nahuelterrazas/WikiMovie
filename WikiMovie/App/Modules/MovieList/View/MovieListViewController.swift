@@ -17,7 +17,7 @@ class MovieListViewController: UIViewController{
     
 
     private var service = MovieListService()
-    private var viewModel: MovieListViewModel? // lo inicializo en viewDidLoad()
+    private var viewModel: MovieListViewModel?
     
     
     private lazy var tableView: UITableView = {
@@ -26,7 +26,6 @@ class MovieListViewController: UIViewController{
         aTable.delegate = self
         aTable.dataSource = self
         aTable.rowHeight = 140
-        // debo registrar la ViewCell antes de poder usarla
         aTable.register(MovieListTableViewCell.self, forCellReuseIdentifier: String(describing: MovieListTableViewCell.self))
         view.addSubview(aTable)
         return aTable
@@ -62,8 +61,8 @@ extension MovieListViewController: UITableViewDelegate {
 
         let movieDetailsVC = MovieDetailsViewController()
         movieDetailsVC.idCell = cell.id
-        
-        self.navigationController?.pushViewController(movieDetailsVC, animated: true)
+
+        self.present(movieDetailsVC, animated: true)
     }
 }
 
@@ -77,16 +76,18 @@ extension MovieListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieListTableViewCell.self), for: indexPath) as? MovieListTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle  = .none
+
         let aMovie = self.viewModel?.getAMovie(at: indexPath.row)
-        
         cell.name = aMovie?.title
-        cell.image = UIImage(named: "poster")
+        
+        if let url = URL(string: Constants().posterURL + (aMovie?.posterPath ?? "")) {
+            cell.placeholderImage.load(url: url)
+        }
         cell.id = aMovie?.id
         
         return cell
     }
-    
-    
 }
 
 extension MovieListViewController: MovieListDelegate{
@@ -97,6 +98,4 @@ extension MovieListViewController: MovieListDelegate{
     func showError(error: String) {
         print("Algo fallo: ", error)
     }
-    
-    
 }

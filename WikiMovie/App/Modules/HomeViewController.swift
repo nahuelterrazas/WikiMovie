@@ -9,10 +9,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    private lazy var Loginbutton: UIButton = {
+    private lazy var PopularMoviesbutton: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.title = "Popular movies"
-        configuration.baseBackgroundColor = .darkGray
+        configuration.baseBackgroundColor = .red.withAlphaComponent(0.5)
         
         let MovieListVC = MovieListViewController()
         let aButton = UIButton(type: .system, primaryAction: UIAction(handler: { _ in
@@ -24,21 +24,23 @@ class HomeViewController: UIViewController {
         return aButton
     }()
     
-    private lazy var TitleLabbel: UILabel = {
-        let aLbl = UILabel()
-        aLbl.text = "wikiM0VIE"
-        aLbl.textColor = .white
-        aLbl.font = UIFont(name: "Arial Rounded MT Bold", size: 50)
-        aLbl.textAlignment = .center
-        aLbl.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(aLbl)
-        return aLbl
+    private lazy var TitleLabel: UILabel = {
+        let aLabel = UILabel()
+        aLabel.text = "WikiMOVIE"
+        aLabel.textColor = .red
+        aLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 50)
+        aLabel.textAlignment = .center
+        aLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(aLabel)
+        return aLabel
     }()
     
     private lazy var logoImage: UIImageView = {
         let aImageView = UIImageView()
         aImageView.image = UIImage(named: "popcorn")
         aImageView.translatesAutoresizingMaskIntoConstraints = false
+        aImageView.contentMode = .scaleAspectFill
         
         view.addSubview(aImageView)
         return aImageView
@@ -52,25 +54,25 @@ class HomeViewController: UIViewController {
 
     func setupView() {
         setupConstraints()
-        view.backgroundColor = .systemRed.withAlphaComponent(0.9)
+        view.backgroundColor = .black
     }
 
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            TitleLabbel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            TitleLabbel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            TitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            TitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         
-            logoImage.topAnchor.constraint(equalTo: TitleLabbel.bottomAnchor, constant: 50),
+            logoImage.topAnchor.constraint(equalTo: TitleLabel.bottomAnchor, constant: 50),
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImage.heightAnchor.constraint(equalToConstant: 100),
             logoImage.widthAnchor.constraint(equalToConstant: 100),
             
-            Loginbutton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            Loginbutton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            Loginbutton.heightAnchor.constraint(equalToConstant: 50),
-            Loginbutton.widthAnchor.constraint(equalToConstant: 150),
+            PopularMoviesbutton.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 75),
+            PopularMoviesbutton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            PopularMoviesbutton.heightAnchor.constraint(equalToConstant: 50),
+            PopularMoviesbutton.widthAnchor.constraint(equalToConstant: 150),
         
         ])
     }

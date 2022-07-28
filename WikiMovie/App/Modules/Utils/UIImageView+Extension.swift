@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  UIImageView+Extension.swift
 //  WikiMovie
 //
 //  Created by Nahuel Terrazas on 26/07/2022.
