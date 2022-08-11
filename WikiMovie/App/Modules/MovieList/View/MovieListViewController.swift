@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 protocol MovieListDelegate {
     func reloadTable()
@@ -82,7 +83,8 @@ extension MovieListViewController: UITableViewDataSource {
         cell.name = aMovie?.title
         
         if let url = URL(string: Constants().posterURL + (aMovie?.posterPath ?? "")) {
-            cell.placeholderImage.load(url: url)
+            cell.placeholderImage.kf.indicatorType = .activity
+            cell.placeholderImage.kf.setImage(with: url, options: [.fromMemoryCacheOrRefresh, .transition(.fade(0.5))])
         }
         cell.id = aMovie?.id
         

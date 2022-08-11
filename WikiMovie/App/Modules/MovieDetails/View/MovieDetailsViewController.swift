@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol MovieDetailsDelegate {
     func movieData(data: MovieDetailsDTO)
@@ -88,8 +89,8 @@ class MovieDetailsViewController: UIViewController {
         let aImage = UIImageView()
         aImage.image = UIImage(named: "backgroundActivityIndicator")
         aImage.translatesAutoresizingMaskIntoConstraints = false
-        aImage.contentMode = .scaleAspectFill
-        aImage.alpha = 0.2
+        aImage.contentMode = .scaleToFill
+        aImage.alpha = 0.3
 
         view.addSubview(aImage)
         return aImage
@@ -154,7 +155,7 @@ extension MovieDetailsViewController: MovieDetailsDelegate {
         titleLabel.text = data.title.uppercased()
         
         if let url = URL(string: Constants().backdropURL + (data.backdropPath)){
-            backdropPoster.load(url: url)
+            backdropPoster.kf.setImage(with: url, options: [.fromMemoryCacheOrRefresh, .transition(.fade(0.5))])
         }
                 
         releaseDateLabel.text = String(data.releaseDate.prefix(4))

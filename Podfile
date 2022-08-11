@@ -7,4 +7,6 @@ target 'WikiMovie' do
 
   # Pods for WikiMovie
 pod 'Alamofire'
+
+pod 'Kingfisher'
 end
